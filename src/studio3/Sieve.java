@@ -12,10 +12,10 @@ public class Sieve {
 		for (int i = 0; i< isPrime.length; i++) {
 			isPrime[i]=true;
 		}
-		for (int i = 2; i< isPrime.length; i++)
+		for (int i = 2; i< Math.sqrt(n); i++)
 		{
 			if (isPrime [i] == true) {
-				for ( int x = 2*i ; x < n; x= x+i) {
+				for ( int x = i*i ; x < n; x= x+i) {
 					isPrime[x] = false;
 				}
 			}
